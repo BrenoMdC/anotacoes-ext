@@ -1,4 +1,4 @@
-# Bloco de Anotações
+# Anotado
 
 Uma extensão simples para o Google Chrome que permite aos usuários fazer anotações enquanto navegam na web.
 
