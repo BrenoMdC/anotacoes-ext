@@ -1,6 +1,5 @@
-// background.js
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("Bloco de Anotações instalado.");
+  console.log("Anotado instalado.");
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
