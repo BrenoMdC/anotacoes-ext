@@ -1,0 +1,30 @@
+{
+  "appName": {
+    "message": "Bloco de Anotações",
+    "description": "Nome da extensão"
+  },
+  "appDescription": {
+    "message": "Uma extensão simples para fazer anotações enquanto navega.",
+    "description": "Descrição da extensão"
+  },
+  "addNote": {
+    "message": "Adicionar",
+    "description": "Botão para adicionar uma nova anotação"
+  },
+  "saveNote": {
+    "message": "Salvar",
+    "description": "Botão para salvar a anotação"
+  },
+  "deleteNote": {
+    "message": "Excluir",
+    "description": "Botão para excluir a anotação"
+  },
+  "placeholder": {
+    "message": "Escreva suas anotações aqui...",
+    "description": "Texto de placeholder para o campo de anotações"
+  },
+  "notesList": {
+    "message": "Lista de Anotações",
+    "description": "Título da lista de anotações"
+  }
+}
