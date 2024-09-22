@@ -43,6 +43,8 @@ notas-extensao/
 ├── _locales/
 │   └── en/
 │       └── messages.json
+│   └── pt_BR/
+│       └── messages.json
 ├── manifest.json
 └── popup.html
 ```
