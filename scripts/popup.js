@@ -16,8 +16,10 @@ document.getElementById('save').addEventListener('click', function() {
   document.querySelectorAll('#notesList li').forEach(function(noteItem) {
     notes.push(noteItem.textContent);
   });
-  chrome.storage.sync.set({ 'notes': notes }, function() {
-    console.log('Anotações salvas');
+  chrome.runtime.sendMessage({ type: 'saveNote', notes: notes }, function(response) {
+    if (response.status === 'success') {
+      console.log('Anotações salvas com sucesso');
+    }
   });
 });
 
@@ -30,8 +32,10 @@ document.getElementById('delete').addEventListener('click', function() {
     }
   });
   document.getElementById('note').value = '';
-  chrome.storage.sync.set({ 'notes': Array.from(notesList.childNodes).map(item => item.textContent) }, function() {
-    console.log('Anotação excluída');
+  chrome.runtime.sendMessage({ type: 'saveNote', notes: Array.from(notesList.childNodes).map(item => item.textContent) }, function(response) {
+    if (response.status === 'success') {
+      console.log('Anotação excluída');
+    }
   });
 });
 
