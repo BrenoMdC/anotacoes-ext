@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Bloco de Anotações",
+    "message": "Anotado",
     "description": "Nome da extensão"
   },
   "appDescription": {
@@ -26,5 +26,13 @@
   "notesList": {
     "message": "Lista de Anotações",
     "description": "Título da lista de anotações"
+  },
+  "saveNoteSuccess": {
+    "message": "Anotações salvas com sucesso",
+    "description": "Mensagem exibida quando as anotações são salvas com sucesso"
+  },
+  "deleteNoteSuccess": {
+    "message": "Anotação excluída com sucesso",
+    "description": "Mensagem exibida quando uma anotação é excluída com sucesso"
   }
 }
