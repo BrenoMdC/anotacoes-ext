@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Notes",
+    "message": "Anotado",
     "description": "Name of the extension"
   },
   "appDescription": {
@@ -23,8 +23,12 @@
     "message": "Write your notes here...",
     "description": "Placeholder text for the notes field"
   },
-  "notesList": {
-    "message": "Notes List",
-    "description": "Title for the notes list"
+  "saveNoteSuccess": {
+    "message": "Notes saved successfully",
+    "description": "Message displayed when notes are saved successfully"
+  },
+  "deleteNoteSuccess": {
+    "message": "Note deleted successfully",
+    "description": "Message displayed when a note is deleted successfully"
   }
 }
