@@ -1,0 +1,30 @@
+{
+  "appName": {
+    "message": "Notes",
+    "description": "Name of the extension"
+  },
+  "appDescription": {
+    "message": "A simple extension for taking notes while browsing.",
+    "description": "Description of the extension"
+  },
+  "addNote": {
+    "message": "Add",
+    "description": "Button to add a new note"
+  },
+  "saveNote": {
+    "message": "Save",
+    "description": "Button to save the note"
+  },
+  "deleteNote": {
+    "message": "Delete",
+    "description": "Button to delete the note"
+  },
+  "placeholder": {
+    "message": "Write your notes here...",
+    "description": "Placeholder text for the notes field"
+  },
+  "notesList": {
+    "message": "Notes List",
+    "description": "Title for the notes list"
+  }
+}
