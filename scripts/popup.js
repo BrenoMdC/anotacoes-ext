@@ -18,7 +18,7 @@ document.getElementById('save').addEventListener('click', function() {
   });
   chrome.runtime.sendMessage({ type: 'saveNote', notes: notes }, function(response) {
     if (response.status === 'success') {
-      console.log(chrome.i18n.getMessage('saveNoteSuccess'));
+      console.log('Anotações salvas com sucesso');
     }
   });
 });
@@ -34,7 +34,7 @@ document.getElementById('delete').addEventListener('click', function() {
   document.getElementById('note').value = '';
   chrome.runtime.sendMessage({ type: 'saveNote', notes: Array.from(notesList.childNodes).map(item => item.textContent) }, function(response) {
     if (response.status === 'success') {
-      console.log(chrome.i18n.getMessage('deleteNoteSuccess'));
+      console.log('Anotação excluída com sucesso');
     }
   });
 });
