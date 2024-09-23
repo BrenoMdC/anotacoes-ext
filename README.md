@@ -30,7 +30,7 @@ Uma extensão simples para o Google Chrome que permite aos usuários fazer anota
 ## Estrutura do Projeto
 ```bash
 notas-extensao/
-├── icons/
+├── imgs/
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
@@ -40,11 +40,6 @@ notas-extensao/
 │   └── popup.js
 ├── styles/
 │   └── popup.css
-├── _locales/
-│   └── en/
-│       └── messages.json
-│   └── pt_BR/
-│       └── messages.json
 ├── manifest.json
 └── popup.html
 ```
