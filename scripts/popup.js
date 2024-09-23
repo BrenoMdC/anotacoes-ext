@@ -1,10 +1,11 @@
 document.getElementById('add').addEventListener('click', function() {
   const noteText = document.getElementById('note').value;
   if (noteText) {
-    const noteItem = document.createElement('li');
+    const noteItem = document.createElement('li');;
     noteItem.textContent = noteText;
     noteItem.addEventListener('click', function() {
       document.getElementById('note').value = noteItem.textContent;
+      document.getElementById('note').setAttribute('data-editing', noteItem.textContent);
     });
     document.getElementById('notesList').appendChild(noteItem);
     document.getElementById('note').value = '';
@@ -13,14 +14,30 @@ document.getElementById('add').addEventListener('click', function() {
 
 document.getElementById('save').addEventListener('click', function() {
   const notes = [];
-  document.querySelectorAll('#notesList li').forEach(function(noteItem) {
-    notes.push(noteItem.textContent);
-  });
+  const editingNote = document.getElementById('note').getAttribute('data-editing');
+  const noteText = document.getElementById('note').value;
+
+  if (editingNote) {
+    document.querySelectorAll('#notesList li').forEach(function(noteItem) {
+      if (noteItem.textContent === editingNote) {
+        noteItem.textContent = noteText;
+      }
+      notes.push(noteItem.textContent);
+    });
+    document.getElementById('note').removeAttribute('data-editing');
+  } else {
+    document.querySelectorAll('#notesList li').forEach(function(noteItem) {
+      notes.push(noteItem.textContent);
+    });
+  }
+
   chrome.runtime.sendMessage({ type: 'saveNote', notes: notes }, function(response) {
     if (response.status === 'success') {
       console.log('Anotações salvas com sucesso');
     }
   });
+
+  document.getElementById('note').value = '';
 });
 
 document.getElementById('delete').addEventListener('click', function() {
@@ -47,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         noteItem.textContent = noteText;
         noteItem.addEventListener('click', function() {
           document.getElementById('note').value = noteItem.textContent;
+          document.getElementById('note').setAttribute('data-editing', noteItem.textContent);
         });
         document.getElementById('notesList').appendChild(noteItem);
       });
