@@ -29,7 +29,7 @@ Uma extensão simples para o Google Chrome que permite aos usuários fazer anota
 
 ## Estrutura do Projeto
 ```bash
-notas-extensao/
+anotacoes-ext/
 ├── imgs/
 │   ├── icon16.png
 │   ├── icon48.png
